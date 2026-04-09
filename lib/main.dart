@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_papua/features/auth/splash_screen.dart';
+import 'package:marketplace_papua/services/notification_service.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -9,6 +10,8 @@ void main() async {
 
   // Inisialisasi Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // Panggil service notifikasi agar aplikasi siap menerima pesan
+  await NotificationService().initNotification();
 
   runApp(const MyApp());
 }
