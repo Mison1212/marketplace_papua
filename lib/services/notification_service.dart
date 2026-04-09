@@ -9,8 +9,9 @@ class NotificationService {
     String? token = await _fcm.getToken();
     print("Firebase Token: $token");
 
+    // Menangani pesan saat aplikasi berjalan (Foreground)
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print("Pesan diterima: ${message.notification?.title}");
+      print("Notifikasi Masuk: ${message.notification?.title}");
     });
   }
 }
