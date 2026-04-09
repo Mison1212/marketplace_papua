@@ -7,45 +7,56 @@ class CatalogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Data dummy sesuai kriteria: Image, Nama, Deskripsi, Harga [cite: 23-27]
-    final List<Product> products = [
+    // Data dummy sesuai kriteria
+    final List<Product> dummyProducts = [
       Product(
         id: "1",
-        name: "Noken Papua",
-        description: "Tas tradisional khas Papua",
-        price: 150000,
-        imageUrl: "https://picsum.photos/200",
+        name: "Noken Motif Papua",
+        description:
+            "Tas tradisional anyaman tangan asli dari serat kayu pilihan.",
+        price: 250000,
+        imageUrl: "https://picsum.photos/id/1/200/300",
       ),
-      // Tambahkan produk lainnya di sini
+      Product(
+        id: "2",
+        name: "Kopi Arubani",
+        description:
+            "Kopi arabika asli pegunungan tengah Papua dengan aroma khas.",
+        price: 85000,
+        imageUrl: "https://picsum.photos/id/2/200/300",
+      ),
+      Product(
+        id: "3",
+        name: "Patung Asmat",
+        description: "Karya seni ukir kayu legendaris dari suku Asmat.",
+        price: 1500000,
+        imageUrl: "https://picsum.photos/id/3/200/300",
+      ),
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Marketplace Papua",
-        ), // Bagian dari Reusable AppBar [cite: 35]
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
-        ],
+        title: const Text("Papua Marketplace"), // Reusable AppBar [cite: 35]
+        centerTitle: true,
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          // Responsive Grid: 2 kolom untuk HP, 4 kolom untuk Desktop/Web
+          // Jika lebar layar > 600px (Desktop/Web), pakai 4 kolom. Jika tidak (Mobile), pakai 2 kolom
           int crossAxisCount = constraints.maxWidth > 600 ? 4 : 2;
 
           return GridView.builder(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(12),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
-              childAspectRatio: 0.75,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
+              crossAxisSpacing: 12,
+              mainAxisSpacing: 12,
+              childAspectRatio: 0.7,
             ),
-            itemCount: products.length,
+            itemCount: dummyProducts.length,
             itemBuilder: (context, index) {
               return CardCatalog(
-                product: products[index],
-              ); // Reusable Card [cite: 32]
+                product: dummyProducts[index],
+              ); // Implementasi Reusable Widget [cite: 62]
             },
           );
         },
