@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace_papua/features/auth/splash_screen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -19,14 +20,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Marketplace Papua',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
       // Kita akan ganti Home dengan Splash Screen di langkah berikutnya
-      home: const Scaffold(
-        body: Center(child: Text("Firebase Ready!")),
-      ),
+      home: const SplashScreen(),
     );
   }
 }
