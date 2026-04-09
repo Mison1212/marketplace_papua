@@ -5,12 +5,10 @@ import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
-  // Pastikan binding framework sudah siap
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Inisialisasi Firebase
+  
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // Panggil service notifikasi agar aplikasi siap menerima pesan
+
   await NotificationService().initNotification();
 
   runApp(const MyApp());
