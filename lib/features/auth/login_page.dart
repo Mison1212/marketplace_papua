@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace_papua/features/catalog/catalog_page.dart';
 import '../../../widgets/custom_button.dart';
 import '../../../widgets/custom_input.dart';
 import '../../../services/auth_service.dart';
@@ -25,16 +26,28 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             CustomInput(label: "Email", controller: _emailController),
             const SizedBox(height: 15),
-            CustomInput(label: "Password", controller: _passwordController, isPassword: true),
+            CustomInput(
+              label: "Password",
+              controller: _passwordController,
+              isPassword: true,
+            ),
             const SizedBox(height: 25),
             // Tombol Login Email [cite: 57]
             CustomButton(
               label: "Login Email",
               onPressed: () async {
                 var user = await _authService.loginWithEmail(
-                    _emailController.text, _passwordController.text);
+                  _emailController.text,
+                  _passwordController.text,
+                );
                 if (user != null) {
                   // Navigasi ke Catalog (Akan dibuat di step berikutnya)
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CatalogPage(),
+                    ),
+                  );
                 }
               },
             ),
