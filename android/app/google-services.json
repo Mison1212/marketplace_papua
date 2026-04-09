@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "814252788949",
+    "project_id": "uts-marketplace",
+    "storage_bucket": "uts-marketplace.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814252788949:android:e587b1d5a6980b78c2265c",
+        "android_client_info": {
+          "package_name": "com.example.marketplace_papua"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxtr2MJ-9ugV_Gv1jQd7qIUT5yFdhQOio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
