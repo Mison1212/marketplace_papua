@@ -7,35 +7,48 @@ class CatalogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Data dummy untuk testing
-    List<Product> products = [
+    // Data dummy sesuai kriteria: Image, Nama, Deskripsi, Harga [cite: 23-27]
+    final List<Product> products = [
       Product(
         id: "1",
-        name: "Produk Papua 1",
-        description: "Deskripsi produk asli Papua",
-        price: 50000,
-        imageUrl: "https://via.placeholder.com/150",
+        name: "Noken Papua",
+        description: "Tas tradisional khas Papua",
+        price: 150000,
+        imageUrl: "https://picsum.photos/200",
       ),
-      Product(
-        id: "2",
-        name: "Produk Papua 2",
-        description: "Kualitas terbaik",
-        price: 75000,
-        imageUrl: "https://via.placeholder.com/150",
-      ),
+      // Tambahkan produk lainnya di sini
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Catalog Marketplace")),
-      body: GridView.builder(
-        padding: const EdgeInsets.all(10),
-        // Menyesuaikan jumlah kolom (Desktop vs Mobile)
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: MediaQuery.of(context).size.width > 600 ? 4 : 2,
-          childAspectRatio: 0.7,
-        ),
-        itemCount: products.length,
-        itemBuilder: (context, index) => CardCatalog(product: products[index]),
+      appBar: AppBar(
+        title: const Text(
+          "Marketplace Papua",
+        ), // Bagian dari Reusable AppBar [cite: 35]
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+        ],
+      ),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // Responsive Grid: 2 kolom untuk HP, 4 kolom untuk Desktop/Web
+          int crossAxisCount = constraints.maxWidth > 600 ? 4 : 2;
+
+          return GridView.builder(
+            padding: const EdgeInsets.all(16),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: crossAxisCount,
+              childAspectRatio: 0.75,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+            ),
+            itemCount: products.length,
+            itemBuilder: (context, index) {
+              return CardCatalog(
+                product: products[index],
+              ); // Reusable Card [cite: 32]
+            },
+          );
+        },
       ),
     );
   }
