@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:async';
+import 'package:marketplace_papua/features/auth/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -23,13 +24,19 @@ class _SplashScreenState extends State<SplashScreen> {
       User? user = FirebaseAuth.instance.currentUser;
 
       if (user != null) {
-        // Jika sudah login, ke halaman Home/Catalog
-        print("User sudah login: ${user.email}");
-        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CatalogPage()));
+        // Sementara ke Scaffold kosong dulu sebelum fitur catalog siap
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const Scaffold(body: Center(child: Text("Halaman Catalog"))),
+          ),
+        );
       } else {
-        // Jika belum login, ke halaman Login
-        print("User belum login");
-        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
       }
     });
   }
