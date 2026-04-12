@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_papua/features/auth/splash_screen.dart';
 import 'package:marketplace_papua/services/notification_service.dart';
-import 'firebase_options.dart';
+import 'firebase_options.bak';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {

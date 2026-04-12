@@ -64,7 +64,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '814252788949',
     projectId: 'uts-marketplace',
     storageBucket: 'uts-marketplace.firebasestorage.app',
-    iosClientId: '814252788949-3pcuu6kkff0n91d9h9usvueoh46j9cdn.apps.googleusercontent.com',
     iosBundleId: 'com.example.marketplacePapua',
   );
 
@@ -74,7 +73,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '814252788949',
     projectId: 'uts-marketplace',
     storageBucket: 'uts-marketplace.firebasestorage.app',
-    iosClientId: '814252788949-3pcuu6kkff0n91d9h9usvueoh46j9cdn.apps.googleusercontent.com',
     iosBundleId: 'com.example.marketplacePapua',
   );
 

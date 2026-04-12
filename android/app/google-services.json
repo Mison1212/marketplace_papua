@@ -12,7 +12,12 @@
           "package_name": "com.example.marketplace_papua"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "814252788949-bmb7b48fh4e97r5shnv9qfqbgcjrg19g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBxtr2MJ-9ugV_Gv1jQd7qIUT5yFdhQOio"
@@ -20,7 +25,55 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814252788949-bmb7b48fh4e97r5shnv9qfqbgcjrg19g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "814252788949-3pcuu6kkff0n91d9h9usvueoh46j9cdn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.marketplacePapua"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814252788949:android:a78094d1c6dced1ec2265c",
+        "android_client_info": {
+          "package_name": "com.marketplace.papua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814252788949-bmb7b48fh4e97r5shnv9qfqbgcjrg19g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxtr2MJ-9ugV_Gv1jQd7qIUT5yFdhQOio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814252788949-bmb7b48fh4e97r5shnv9qfqbgcjrg19g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "814252788949-3pcuu6kkff0n91d9h9usvueoh46j9cdn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.marketplacePapua"
+              }
+            }
+          ]
         }
       }
     }
