@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:async';
 import 'package:marketplace_papua/features/auth/login_page.dart';
 
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
