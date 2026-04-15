@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class CustomInput extends StatelessWidget {
   final String label;
   final TextEditingController controller;
@@ -18,10 +17,23 @@ class CustomInput extends StatelessWidget {
     return TextFormField(
       controller: controller,
       obscureText: isPassword,
+      style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         labelText: label,
+        labelStyle: const TextStyle(color: Colors.white70),
+        filled: true,
+        fillColor: const Color(0xFF122041),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: Colors.white24),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: Colors.blueAccent),
+        ),
       ),
+      cursorColor: Colors.white,
     );
   }
 }
