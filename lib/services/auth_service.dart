@@ -19,6 +19,20 @@ class AuthService {
     }
   }
 
+  // Registrasi Email & Password
+  Future<User?> registerWithEmail(String email, String password) async {
+    try {
+      UserCredential result = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return result.user;
+    } catch (e) {
+      print('Register error: ${e.toString()}');
+      return null;
+    }
+  }
+
   // Login Google (Gmail) [cite: 10, 58]
   Future<User?> signInWithGoogle() async {
     try {
@@ -27,6 +41,12 @@ class AuthService {
 
       final GoogleSignInAuthentication googleAuth =
           await googleUser.authentication;
+
+      if (googleAuth.accessToken == null || googleAuth.idToken == null) {
+        print('Google auth token missing');
+        return null;
+      }
+
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
@@ -35,7 +55,7 @@ class AuthService {
       UserCredential result = await _auth.signInWithCredential(credential);
       return result.user;
     } catch (e) {
-      print(e.toString());
+      print('Google sign in error: ${e.toString()}');
       return null;
     }
   }
