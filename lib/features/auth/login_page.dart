@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_papua/features/catalog/catalog_page.dart';
-import 'package:marketplace_papua/widgets/custom_button.dart';
+import 'package:marketplace_papua/features/auth/widgets/custom_button.dart';
 import 'package:marketplace_papua/widgets/custom_input.dart';
 import 'package:marketplace_papua/services/auth_service.dart';
 
