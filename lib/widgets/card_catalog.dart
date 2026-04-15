@@ -20,7 +20,7 @@ class CardCatalog extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(15),
               ),
-              child: Image.network(
+              child: Image.asset(
                 product.imageUrl,
                 width: double.infinity,
                 fit: BoxFit.cover,
