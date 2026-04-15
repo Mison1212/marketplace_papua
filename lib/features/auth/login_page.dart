@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_papua/features/catalog/catalog_page.dart';
-import '../../../widgets/custom_button.dart';
-import '../../../widgets/custom_input.dart';
-import '../../../services/auth_service.dart';
+import 'package:marketplace_papua/widgets/custom_button.dart';
+import 'package:marketplace_papua/widgets/custom_input.dart';
+import 'package:marketplace_papua/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
