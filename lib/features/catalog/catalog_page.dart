@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../models/product_model.dart';
-import '../../widgets/card_catalog.dart';
+import 'package:marketplace_papua/models/product_model.dart'; 
+import 'package:marketplace_papua/widgets/card_catalog.dart';
 
 class CatalogPage extends StatelessWidget {
   const CatalogPage({super.key});
