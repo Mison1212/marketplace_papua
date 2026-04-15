@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/product_model.dart';
+import 'package:marketplace_papua/models/product_model.dart';
 
 class CardCatalog extends StatelessWidget {
   final Product product;
